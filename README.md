@@ -3,11 +3,9 @@ This repository contains scripts which accompany the manuscript "A neural networ
 
 ## Paper figures 
 
-```
 PAPER_FIGURES.ipynb  # To plot the figures from the manuscript 
 PAPER_metrics.ipynb  # To calculate metrics when a neural network has been applied to a simulation
 functions.py         # Some useful functions 
-```
 
 ## To normalise input data for neural network training
 ```
