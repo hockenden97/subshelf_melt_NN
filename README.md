@@ -9,6 +9,12 @@ PAPER_metrics.ipynb  # To calculate metrics when a neural network has been appli
 functions.py         # Some useful functions 
 ```
 
+## To normalise input data for neural network training
+```
+NN_norm_input_OPM_mixed_fullruns.py  # Python script to normalise input data 
+NORM_inputOPM_mixed.sh               # Bash script to normalise input data 
+```
+
 ## To train a neural network 
 
 ```
