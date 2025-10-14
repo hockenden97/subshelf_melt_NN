@@ -17,7 +17,7 @@ functions.py         # Some useful functions
 
 ## To merge processed files together 
 
-Input data is geometric data for this simulation (\[simulation name\]_geometrics_masks.nc) and (\[simulation_name\] _geom_vars.nc), plus the processed data for each month/year of the simulation (nn_input_\[simulation_name\]_y\[year\]_m\[month\].nc)
+Input data is geometric data for this simulation (\[simulation name\]\_geometrics\_masks.nc) and (\[simulation name\]\_geom\_vars.nc), plus the processed data for each month/year of the simulation (nn\_input\_\[simulation name\]\_y\[year\]\_m\[month\].nc)
 
 Output data (.csv) is a processed data file with columns for each of the input variables. 
 
