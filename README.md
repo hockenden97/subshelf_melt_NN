@@ -2,12 +2,19 @@
 This repository contains scripts which accompany the manuscript "A neural network emulator of ice-shelf melt rates for use in low resolution ocean models". 
 
 ## Paper figures 
-
+```
 PAPER_FIGURES.ipynb  # To plot the figures from the manuscript 
 PAPER_metrics.ipynb  # To calculate metrics when a neural network has been applied to a simulation
 functions.py         # Some useful functions 
+```
 
 ## To normalise input data for neural network training
+
+Input data is a csv file with columns for 
+lat, lon, temperature_prop, salinity_prop, melt_m_ice_per_y, mean_T, mean_S, std_T, std_S, year, month, basins_NEMO, distances_GL, distances_OO, distances_OC, corrected_isdraft, area, bathymetry, slope_is_lon, slope_is_lat, slope_ba_lon, slope_ba_lat, slope_is_across_front, slope_is_towards_front, slope_ba_across_front, slope_ba_towards_front
+
+Output data is three .nc files, one for the normalised metrics, one for the normalised training data, and one for the validation data. 
+
 ```
 NN_norm_input_OPM_mixed_fullruns.py  # Python script to normalise input data 
 NORM_inputOPM_mixed.sh               # Bash script to normalise input data 
