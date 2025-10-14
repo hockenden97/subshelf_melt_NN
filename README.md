@@ -7,3 +7,10 @@ This repository contains scripts which accompany the manuscript "A neural networ
 PAPER_FIGURES.ipynb  # To plot the figures from the manuscript 
 PAPER_metrics.ipynb  # To calculate metrics when a neural network has been applied to a simulation
 ```
+
+## To train a neural network 
+
+```
+training.py          # Python script to train a neural network
+TRAIN_seedloop.sh    # Bash script to train ensemble of 10 neural networks (seeds 1-10)
+```
