@@ -1,6 +1,8 @@
 # subshelf_melt_NN
 This repository contains scripts which accompany the manuscript "A neural network emulator of ice-shelf melt rates for use in low resolution ocean models". 
 
+
+
 ## Paper figures 
 
 Input data is from the folder 'Figure_data/', available in the associated Zenodo repository.
@@ -9,6 +11,19 @@ Input data is from the folder 'Figure_data/', available in the associated Zenodo
 PAPER_FIGURES.ipynb  # To plot the figures from the manuscript 
 PAPER_metrics.ipynb  # To calculate metrics when a neural network has been applied to a simulation
 functions.py         # Some useful functions 
+```
+
+
+
+## To merge processed files together 
+
+Input data is geometric data for this simulation (\[simulation name\]_geometrics_masks.nc) and (\[simulation_name\]_geom_vars.nc), plus the processed data for each month/year of the simulation (nn_input_\[simulation_name\]_y\[year\]_m\[month\].nc)
+
+Output data (.csv) is a processed data file with columns for each of the input variables. 
+
+```
+MERGE_OPM026.py # Python script to merge processed files together 
+MERGE_OPM026.sh # Bash script to merge processed files together 
 ```
 
 ## To normalise input data for neural network training
