@@ -52,6 +52,8 @@ Input data is geometric data for this simulation (\[simulation name\]\_geometric
 Output data (.csv) is a processed data file with columns for each of the input variables. 
 (lat, lon, temperature_prop, salinity_prop, melt_m_ice_per_y, mean_T, mean_S, std_T, std_S, year, month, basins_NEMO, distances_GL, distances_OO, distances_OC, corrected_isdraft, area, bathymetry, slope_is_lon, slope_is_lat, slope_ba_lon, slope_ba_lat, slope_is_across_front, slope_is_towards_front, slope_ba_across_front, slope_ba_towards_front) 
 
+The processed data files for each simulation used in the manuscript are available in the associated Zenodo repository (\[simulation name\]\_whole\_dataset\_not\_yet\_normalised.csv). 
+
 ```
 MERGE_OPM026.py      # Python script to merge processed files together 
 MERGE_OPM026.sh      # Bash script to merge processed files together
@@ -74,6 +76,9 @@ NORM_inputOPM_mixed.sh               # Bash script to normalise input data
 Input data is the normalised training data and normalised validation data. 
 
 Output data is the training neural network (.keras) and the history file for the training (.history)
+
+The trained neural networks for each simulation used in the manuscript are available in the associated Zenodo repository (model\_nn\_small\_slope\_front\_\[simulation name\]\_\[seed]\_extrap\_std.keras). 
+The final neural network trained with all available simulations is available in the associated Zenodo repository (model\_nn\_small\_slope\_front\_OPM026\_OPM0263\_OPM031\_OPM016\_OPM018\_OPM021\_ctrl94\_isf94\_isfru94\_\[seed\]\_extrap\_std.keras). 
 
 ```
 training.py          # Python script to train a neural network
