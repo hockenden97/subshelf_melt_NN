@@ -77,8 +77,8 @@ Input data is the normalised training data and normalised validation data.
 
 Output data is the training neural network (.keras) and the history file for the training (.history)
 
-The trained neural networks for each simulation used in the manuscript are available in the associated Zenodo repository (model\_nn\_small\_slope\_front\_\[simulation name\]\_\[seed]\_extrap\_std.keras). 
-The final neural network trained with all available simulations is available in the associated Zenodo repository (model\_nn\_small\_slope\_front\_OPM026\_OPM0263\_OPM031\_OPM016\_OPM018\_OPM021\_ctrl94\_isf94\_isfru94\_\[seed\]\_extrap\_std.keras). 
+The trained neural networks for each simulation used in the manuscript are available in the associated Zenodo repository (model\_nn\_small\_slope\_front\_\[simulation name\]\_\[seed]\_extrap\_std.keras), where seed is between 01 and 10.  
+The final neural network trained with all available simulations is available in the associated Zenodo repository (model\_nn\_small\_slope\_front\_OPM026\_OPM0263\_OPM031\_OPM016\_OPM018\_OPM021\_ctrl94\_isf94\_isfru94\_\[seed\]\_extrap\_std.keras), where seed is between 01 and 10.  
 
 ```
 training.py          # Python script to train a neural network
