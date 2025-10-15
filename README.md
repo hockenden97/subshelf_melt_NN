@@ -13,7 +13,25 @@ PAPER_metrics.ipynb  # To calculate metrics when a neural network has been appli
 functions.py         # Some useful functions 
 ```
 
+## To create geometric masks for each simulation (note that if the geometry is not fixed then this step will need modifying)
 
+Input files are 
+
+```
+PREP_ALL_masks.ipynb # Jupyter notebook to prepare geometric masks for each simulation
+```
+
+## To go from raw NEMO files to processed files (T/S propagated for each point within the cavity) 
+### For monthly data 
+```
+PREP_inputOPM.py      # Python script to propagate T and S
+JOB_prep_for_loop.sh  # Bash script to propagate T and S 
+```
+### For annual data 
+```
+PREP_ALL_TSmelt.py   # Python script to propagate T and S for annual data 
+PREP_ALL_TSmelt.sh   # Bash script to propagate T and S for annual data
+```
 
 ## To merge processed files together 
 
@@ -22,10 +40,10 @@ Input data is geometric data for this simulation (\[simulation name\]\_geometric
 Output data (.csv) is a processed data file with columns for each of the input variables. 
 (lat, lon, temperature_prop, salinity_prop, melt_m_ice_per_y, mean_T, mean_S, std_T, std_S, year, month, basins_NEMO, distances_GL, distances_OO, distances_OC, corrected_isdraft, area, bathymetry, slope_is_lon, slope_is_lat, slope_ba_lon, slope_ba_lat, slope_is_across_front, slope_is_towards_front, slope_ba_across_front, slope_ba_towards_front) 
 
-
 ```
-MERGE_OPM026.py # Python script to merge processed files together 
-MERGE_OPM026.sh # Bash script to merge processed files together 
+MERGE_OPM026.py      # Python script to merge processed files together 
+MERGE_OPM026.sh      # Bash script to merge processed files together
+PREP_ALL_merge.ipynb # Jupyter notebook to merge processed files together 
 ```
 
 ## To normalise input data for neural network training
