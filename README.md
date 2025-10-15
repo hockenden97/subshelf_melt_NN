@@ -13,15 +13,25 @@ PAPER_metrics.ipynb  # To calculate metrics when a neural network has been appli
 functions.py         # Some useful functions 
 ```
 
+## 
+
+
 ## To create geometric masks for each simulation (note that if the geometry is not fixed then this step will need modifying)
 
-Input files are 
+Input files are a file with basin numbers (.nc), the domain CFG file for the cavities which are resolved in NEMO 1 degree (.nc), the meshmask for the simulation (.nc), and if necessary also the separate domain CFG file for the simulation (.nc) which contains the bathymetry and ice shelf draft files. 
+
+Output files are the outline masks for the different grid cells (ocean, cavity, grounded ice etc), (\[simulation name\]\_geometric\_masks.nc), and the geometry variables needed for the simulation (\[simulation name\]\_geom\_vars.nc).
 
 ```
 PREP_ALL_masks.ipynb # Jupyter notebook to prepare geometric masks for each simulation
 ```
 
 ## To go from raw NEMO files to processed files (T/S propagated for each point within the cavity) 
+
+Input files are the raw NEMO files (.nc), plus the outline masks (geometric_masks.nc) and the geometry variables (geom_vars.nc).
+
+Output files are the processed data for each month/year of the simulation (nn\_input\_\[simulation name\]\_y\[year\]\_m\[month\].nc). 
+
 ### For monthly data 
 ```
 PREP_inputOPM.py      # Python script to propagate T and S
